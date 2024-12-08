@@ -10,8 +10,7 @@ import axios from "axios";
 export default function Home({ banner , blogs , homeProducts}) {
 
 
-    console.log("banner length" , banner.length);
-    console.log("blog length" , blogs.length);
+
   
   const [name, setName] = useState("");
   const [response, setResponse] = useState("");
