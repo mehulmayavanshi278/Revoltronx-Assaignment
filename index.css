@@ -4,5 +4,10 @@
   box-sizing: border-box;
 }
 
-
+.slick-dots {
+  position: static !important; /* Remove absolute positioning */
+  /* margin-top: 20px; Optional: Adjust spacing from the slider */
+  display: flex;
+  justify-content: center; /* Center-align dots */
+}
 

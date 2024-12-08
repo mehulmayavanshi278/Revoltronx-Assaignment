@@ -45,10 +45,10 @@ const ImageSlider = ({banner=[]}) => {
   };
 
   return (
-    <div className="relative m-0 p-0 overflow-x-hidden">
+    <div className="relative m-0 p-0 overflow-hidden">
       <Slider {...settings}>
         {banner?.map((elm, id) => (
-          <div key={id+'rela'} className="relative   overflow-hidden">
+          <div key={elm._id} className="relative   overflow-hidden">
             {/* Image Animation */}
             <motion.div
               className=" w-full relative"

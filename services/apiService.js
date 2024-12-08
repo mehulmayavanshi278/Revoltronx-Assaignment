@@ -1,6 +1,6 @@
 import axios from "axios";
 import TokenHelper from "../Helpers/TokenHelper";
-const BaseURL = "http://localhost:3000";
+const BaseURL = process.env.NEXT_PUBLIC_BASE_URL;
 
 class apiService {
 

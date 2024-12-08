@@ -1,5 +1,5 @@
 import cartController from "../../../controllers/cart";
-import { Auth } from "../../../Middleware/Auth";
+import { Auth } from "../../../middleware/Auth";
 
 export default async function(req , res){
     const {method} = req;
