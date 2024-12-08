@@ -3,11 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+/* 
 .slick-dots {
-  position: static !important; /* Remove absolute positioning */
-  /* margin-top: 20px; Optional: Adjust spacing from the slider */
+  position: static !important; 
+
   display: flex;
-  justify-content: center; /* Center-align dots */
-}
+  justify-content: center; 
+} */
 
