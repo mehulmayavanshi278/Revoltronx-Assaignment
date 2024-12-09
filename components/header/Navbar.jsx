@@ -189,8 +189,8 @@ function Navbar({ }) {
               </div>
               <div className=''>
                 <div className='flex flex-row justify-end space-x-2 items-center'>
-                <div className="relative group" onClick={()=>{router.push('/login')}}>
-                <button type="button" className="py-2 px-2  text-sm font-[10px] text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+                <div className="relative group z-10 cursor-pointer" onClick={()=>{router.push('/login')}}>
+                <button type="button" className="py-2 px-2 cursor-pointer  text-sm font-[10px] text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
                 <img className="profileIcon   cursor-pointer" src="/svg/profile.svg" alt="" />
                  </button>
    <div className="absolute z-10 bottom-[-10px] left-0 bg-black rounded-[4px] px-2 py-1 shadow-md opacity-0 group-hover:opacity-100 transform group-hover:translate-y-[28px] translate-y-0 transition-all duration-300 pointer-events-none group-hover:pointer-events-auto">
@@ -209,7 +209,7 @@ function Navbar({ }) {
 </div>
 
 <div className="flex items-center lg:space-x-2">
-        <div className='relative'> 
+        <div className='relative z-10'> 
         <button onClick={()=>{openPop("cart")}} id="myCartDropdownButton1" data-dropdown-toggle="myCartDropdown1" type="button" className="inline-flex items-center rounded-lg justify-center p-2 hover:bg-gray-100 dark:hover:bg-gray-700 text-sm font-medium leading-none text-gray-900 dark:text-white">
           <span className="lg:block hidden sr-only">
             Cart
