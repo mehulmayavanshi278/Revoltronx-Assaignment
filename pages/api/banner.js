@@ -9,6 +9,7 @@ export default async function handler(req ,res){
             await bannerController.create(req ,res);
             break;
         case "GET":
+            console.log('get all banner in handler');
             await bannerController.getAllBanners(req,res);
             break;
         default:
