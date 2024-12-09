@@ -112,7 +112,8 @@ class apiService {
 
     // home page apis
     getAllBaners = async()=>{
-      return axios.get(BaseURL + "/api/banner");
+      console.log("BaseURL:",BaseURL);
+      return axios.get(BaseURL + "/api/banner" , {timeout: 9000});
     }
     createBenner = async(obj)=>{
       return axios.post(BaseURL + "/api/banner" , obj);
