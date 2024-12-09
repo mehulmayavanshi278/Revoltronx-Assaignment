@@ -45,15 +45,15 @@ export async function getServerSideProps() {
   try{
  
    const banner = await apiService.getAllBaners();
-   const blogs = await apiService.getAllBlogs();
-   const homeProducts = await apiService.getHomeSeasonCollection();
+  //  const blogs = await apiService.getAllBlogs();
+  //  const homeProducts = await apiService.getHomeSeasonCollection();
 
 
     return {
       props: {
         banner : banner.data,
-        blogs : blogs.data,
-        homeProducts:homeProducts.data,
+        // blogs : blogs.data,
+        // homeProducts:homeProducts.data,
       },
     };
   }catch(err){
