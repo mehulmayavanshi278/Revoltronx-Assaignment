@@ -57,9 +57,9 @@ const ProductModal = ({ product, isOpen, onClose , refreshCart }) => {
   return (
     <>
       {isOpenModel && (
-        <div className=" shadow-lg fixed rounded-lg antialiased inset-0 dark:bg-gray-800 bg-gray-500 bg-opacity-70 z-50 flex items-center justify-center">
+        <div className="w-full h-full m-0 p-0 fixed shadow-lg  rounded-lg antialiased inset-0 dark:bg-gray-800 bg-gray-500 bg-opacity-70  flex items-center justify-center">
           {/* Modal Container */}
-          <div className="relative bg-white w-full max-w-md rounded-lg shadow-lg overflow-hidden">
+          <div className="relative z-50 bg-white w-full max-w-md rounded-lg shadow-lg overflow-hidden">
             {/* Close Button */}
             <button
               onClick={onClose}

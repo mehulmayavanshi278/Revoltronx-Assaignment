@@ -1,12 +1,9 @@
 {
-  "/_document": "pages/_document.js",
-  "/_error": "pages/_error.js",
   "/_app": "pages/_app.js",
-  "/api/banner": "pages/api/banner.js",
-  "/": "pages/index.js",
-  "/api/blog": "pages/api/blog.js",
-  "/shop": "pages/shop.js",
-  "/api/cart": "pages/api/cart.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/shop/[category]": "pages/shop/[category].js",
   "/api/shop": "pages/api/shop.js",
-  "/api/user/user": "pages/api/user/user.js"
+  "/": "pages/index.js",
+  "/shop/[category]/[id]": "pages/shop/[category]/[id].js"
 }

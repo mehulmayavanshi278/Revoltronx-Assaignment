@@ -151,13 +151,14 @@ function Shoppage({products}) {
         
           <div className="relative bg-white w-full max-w-md rounded-lg shadow-lg ">
       
+
+            <div className="lg:w-[500px] relative md:w-[420px] w-[260px] mx-auto ">
             <button
               onClick={()=>{setOpenImg("");setIsOpenImg(false)}}
               className="absolute z-60 top-3 right-3 bg-gray-200 hover:bg-gray-300 text-gray-600 font-bold rounded-full w-8 h-8 flex items-center justify-center"
             >
               ✕
             </button>
-            <div className="lg:w-[700px] md:w-[550px] w-[320px] mx-auto ">
               <img className="max-h-[90vh]" src={openImg} alt=""/>
             </div>
        </div>

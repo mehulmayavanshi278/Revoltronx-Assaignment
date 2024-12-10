@@ -45,9 +45,9 @@ const ProductSlider = ({homeProducts}) => {
                     <>
                     <div key={elm._id} className='lg:w-[330px] w-full lg:h-[420px] h-[340px] shadow-lg  hover:scale-[1.08] transition-transform  duration-500 relative cursor-pointer rounded-[10px]' onClick={()=>{router.push(`/shop/${elm._id}?type=category&val=${elm._id}`)}}>
                  <img className='h-full w-full object-cover' src={elm.imgURL} alt=''/>
-                 <div className='absolute w-full z-10 bottom-[30px] left-0 p-3 px-[25px]'>
+                 <div className='absolute w-full z-0 bottom-[30px] left-0 p-3 px-[25px]'>
                      <div className='flex flex-row w-full items-center justify-between space-x-2'>
-                         <div className=''>
+                         <div className=''>   
                    
                             <button
                     

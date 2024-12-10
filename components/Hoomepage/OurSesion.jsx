@@ -7,7 +7,7 @@ import ProductSlider from './OursecionSlider';
 function OurSesion({homeProducts}) {
   return (
     <div>
-      <div className='lg:px-[100px] md:px-[50px] px-[40px] relative z-10 '>
+      <div className='lg:px-[100px] md:px-[50px] px-[40px] relative z-0 '>
          <div className='absolute w-[250px] top-[-190px] left-0 z-0'>
             <img className='lg:block hidden w-full' src=' https://ashtanga.qodeinteractive.com/wp-content/uploads/2023/04/main-home-offset-img.png' alt=''/>
          </div>

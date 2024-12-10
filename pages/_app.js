@@ -11,13 +11,14 @@ import { useRouter } from 'next/router';
 
 import Layout from '../components/layout';
 import AdminLayout from '../components/AdminLayout/Layout'
+import { CartProvider } from '../context/cartConext/CartProvider';
 
 export default function MyApp({ Component, pageProps }) {
 
   const router = useRouter();
   console.log(router.pathname);
   const isAdminRoute = router.pathname.startsWith('/admin');
-  return (
+  return (  
     <>
       {isAdminRoute ? (
         // Render only the Component for admin routes (no Layout)
@@ -27,9 +28,13 @@ export default function MyApp({ Component, pageProps }) {
    
       ) : (
         // Render Layout for user routes
+        <CartProvider>
+
+      
         <Layout>
           <Component {...pageProps} />
         </Layout>
+        </CartProvider>
       )}
       <ToastContainer />
     </>

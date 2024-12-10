@@ -7,14 +7,16 @@ import ProductModal from '../shop/ProductModal';
 import apiService from '../../services/apiService';
 import CancelIcon from '@mui/icons-material/Cancel';
 import TokenHelper from '../../Helpers/TokenHelper';
+import { useCart } from '../../context/cartConext/CartProvider';
 
 
 function Navbar({ }) {
 
    const router = useRouter();
- 
+ const {fetchCartItems , cartProducts} = useCart();
+
   const [user , setUser] = useState()
-  const [cartProducts , setCartProducts] = useState();
+  // const [cartProducts , setCartProducts] = useState();
   const [isOpenCart , setIsOpenCart] = useState(false); 
   const [isOpenProfile , setIsOpenProfile] = useState(false); 
   const cartRef = useRef(null);
@@ -65,10 +67,7 @@ function Navbar({ }) {
   const refreshCart = async()=>{
      console.log("refresh me");
      try{
-       const res = await apiService.getAllCartItems();
-       if(res.status===200){
-        setCartProducts(res.data);
-       }
+        fetchCartItems()
      }catch(err){
       console.log(err);
      }
@@ -81,7 +80,7 @@ function Navbar({ }) {
      const res = await apiService.removeFromCart(id , userId);
      if(res.status===200){
       console.log(res.data);
-      refreshCart();
+      fetchCartItems();
      }
     }catch(err){
       console.log(err);
@@ -112,17 +111,7 @@ function Navbar({ }) {
       console.log(err);
     }
   }
-  const getCartItems = async()=>{
-    try{
-      const res = await apiService.getAllCartItems();
-      if(res.status===200){
-        console.log(res.data);
-        setCartProducts(res.data);
-      }
-    }catch(err){
-      console.log(err);
-    }
-  }
+
 
 
 
@@ -130,7 +119,7 @@ function Navbar({ }) {
   useEffect(()=>{
    if(TokenHelper.get()){
     getUser();
-    getCartItems()
+    fetchCartItems()
    }
   },[]);
 
@@ -157,7 +146,7 @@ function Navbar({ }) {
                     </div>
                   </div>
 
-<div className={`lg:relative  duration-300 bg-white lg:shadow-none shadow-lg rounded-b-lg z-20 lg:p-0 p-4 absolute lg:w-auto w-full transition-all ${isOpenMenu ? 'top-0' : 'lg:top-0 top-[-500px]'}  left-0 `}>
+<div className={`lg:relative  duration-300 bg-white lg:shadow-none shadow-lg rounded-b-lg md:z-0 z-20 lg:p-0 p-4 absolute lg:w-auto w-full transition-all ${isOpenMenu ? 'top-0' : 'lg:top-0 top-[-500px]'}  left-0 `}>
   <div className='absolute z-20 right-[10px] top-[10px]'>
   <button onClick={()=>{setIsOpenMenu(false)}} type="button" data-collapse-toggle="ecommerce-navbar-menu-1" aria-controls="ecommerce-navbar-menu-1" aria-expanded="false" className="inline-flex lg:hidden  items-center justify-center hover:bg-gray-100 rounded-md dark:hover:bg-gray-700 p-2 text-gray-900 dark:text-white">
           <CancelIcon/>              

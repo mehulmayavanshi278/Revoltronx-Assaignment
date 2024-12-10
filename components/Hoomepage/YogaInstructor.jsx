@@ -25,7 +25,7 @@ function YogaInstructor() {
     <div ref={ref}>
       <div className="relative">
         {/* Decorative Image */}
-        <div className="absolute w-[300px] right-0 top-[-150px] z-0">
+        <div className="absolute w-[300px] right-0 top-[-150px] z-[-1]">
           <img
             className="w-full"
             src="https://ashtanga.qodeinteractive.com/wp-content/uploads/2023/04/main-home-offset-img-2.png"
@@ -35,7 +35,7 @@ function YogaInstructor() {
 
         {/* Content Section */}
         <div className="pt-[50px] lg:px-[100px] md:px-[50px] px-[40px]">
-          <div className="md:grid relative z-10  lg:overflow-visible overflow-hidden xl:grid-cols-[500px,500px] lg:grid-cols-[500px,400px] grid-cols-2 gap-x-3">
+          <div className="md:grid relative z-0  lg:overflow-visible overflow-hidden xl:grid-cols-[500px,500px] lg:grid-cols-[500px,400px] grid-cols-2 gap-x-3">
             {/* Left Image */}
             <motion.div
               initial={{ x: -100, opacity: 0 }}

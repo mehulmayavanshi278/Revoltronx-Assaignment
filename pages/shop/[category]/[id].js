@@ -8,6 +8,9 @@ import React, {
  import Ratings from "../../../components/shop/StarRating";
 import {motion} from 'framer-motion'
 import apiService from "../../../services/apiService";
+import { useRouter } from "next/router";
+import { toast } from "react-toastify";
+import { useCart } from "../../../context/cartConext/CartProvider";
 
 // const singleProductData = {
 //     name: "Yoga Mat Bag",
@@ -134,6 +137,8 @@ const Description = ({ description }) => {
   }
 
 export default function SingleProduct({singleProductData}){
+  const router = useRouter();
+  const {fetchCartItems} = useCart();
     console.log(singleProductData);
     const [activeTab, setActiveTab] = useState("DESCRIPTION");
     const tabs = [
@@ -144,6 +149,34 @@ export default function SingleProduct({singleProductData}){
       "MORE PRODUCTS",
       "RATINGS"
     ];
+
+    const handleAddToCart = async()=>{
+      try{
+        console.log(router.query.id);
+        const id = router.query.id;
+        const obj = {
+          productId:id,
+          quantity:1
+        } 
+  
+        const res = await apiService.addToCart(obj);
+        
+        console.log(res);
+        if(res.status===200){
+          fetchCartItems();
+          toast.success("one Item Added To Cart");
+        }
+      }catch(err){
+        console.log(err);
+        if (err.response && err.response.status === 400) {
+          toast.error(err?.response?.data?.message);
+        } else {
+          console.log(err);
+        }
+      }
+
+
+    }
     return(
         <>
                 <div className="pb-[50px]">
@@ -257,7 +290,7 @@ export default function SingleProduct({singleProductData}){
                                </div>
                             </div> */}
 
-                            <div
+                            <div onClick={handleAddToCart}
                               className="bg-black hover:bg-[blue] transition-all transition-0.8 cursor-pointer flex flex-row items-center justify-center gap-2 h-[55px] px-[35px]"
                             >
                               <ShoppingCartIcon
