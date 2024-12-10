@@ -105,7 +105,7 @@ function Navbar({ }) {
     try{
       const res = await apiService.getUsers();
       if(res.status===200){
-        console.log(res.data);
+        console.log("user:" , res.data);
         setUser(res.data);
       }
     }catch(err){
@@ -124,6 +124,9 @@ function Navbar({ }) {
     }
   }
 
+
+
+
   useEffect(()=>{
    if(TokenHelper.get()){
     getUser();
@@ -131,22 +134,22 @@ function Navbar({ }) {
    }
   },[]);
 
-  const [isClient, setIsClient] = useState(false);
+ 
 
   useEffect(()=>{
     setIsClient(true);
   },[isModalOpen])
 
+
+  const [isClient, setIsClient] = useState(false);
   if (!isClient) {
     return null; // Or you could render a placeholder button, e.g., "Loading..."
   }
 
-
-
   return (
     <div>
      <div className=''>
-        <div className=' bg-[white] relative lg:px-[100px] px-[40px] text-black lg:grid xl:grid-cols-[1fr,400px] grid-cols-1 flex justify-between items-center gap-x-[100px] py-2'>
+        <div className=' bg-[white] relative lg:px-[100px] md:px-[40px] px-[10px] text-black lg:grid xl:grid-cols-[1fr,400px] grid-cols-1 flex justify-between items-center md:gap-x-[100px]  py-2'>
               <div className='flex flex-row justify-between items-center'>
                   <div className=''>
                     <div className='w-[70px]'>
@@ -154,7 +157,7 @@ function Navbar({ }) {
                     </div>
                   </div>
 
-<div className={`lg:relative  duration-300 bg-white lg:shadow-none shadow-lg rounded-b-lg z-10 lg:p-0 p-4 absolute lg:w-auto w-full transition-all ${isOpenMenu ? 'top-0' : 'lg:top-0 top-[-500px]'}  left-0 `}>
+<div className={`lg:relative  duration-300 bg-white lg:shadow-none shadow-lg rounded-b-lg z-20 lg:p-0 p-4 absolute lg:w-auto w-full transition-all ${isOpenMenu ? 'top-0' : 'lg:top-0 top-[-500px]'}  left-0 `}>
   <div className='absolute z-20 right-[10px] top-[10px]'>
   <button onClick={()=>{setIsOpenMenu(false)}} type="button" data-collapse-toggle="ecommerce-navbar-menu-1" aria-controls="ecommerce-navbar-menu-1" aria-expanded="false" className="inline-flex lg:hidden  items-center justify-center hover:bg-gray-100 rounded-md dark:hover:bg-gray-700 p-2 text-gray-900 dark:text-white">
           <CancelIcon/>              
@@ -189,7 +192,7 @@ function Navbar({ }) {
               </div>
               <div className=''>
                 <div className='flex flex-row justify-end space-x-2 items-center'>
-                <div className="relative group z-10 cursor-pointer" onClick={()=>{router.push('/login')}}>
+{     !TokenHelper.get()          && <div className="relative group z-10 cursor-pointer" onClick={()=>{router.push('/login')}}>
                 <button type="button" className="py-2 px-2 cursor-pointer  text-sm font-[10px] text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
                 <img className="profileIcon   cursor-pointer" src="/svg/profile.svg" alt="" />
                  </button>
@@ -197,7 +200,7 @@ function Navbar({ }) {
       <p className="text-[16px] text-white font-[600]">Login</p>
    </div>
 
-</div>
+</div>}
 
 <div className=''>
 <div className=''>
@@ -223,7 +226,7 @@ function Navbar({ }) {
           </svg>   
 
         </button>
-        { isOpenCart && <div ref={cartRef} id="myCartDropdown1" className="absolute w-[250px] right-0 z-10 mx-auto max-w-sm space-y-4  rounded-lg bg-white p-4 px-0 antialiased shadow-lg dark:bg-gray-800">
+        { isOpenCart && <div ref={cartRef} id="myCartDropdown1" className="absolute w-[250px] sm:right-0 right-[-35px] z-10 mx-auto max-w-sm space-y-4  rounded-lg bg-white p-4 px-0 antialiased shadow-lg dark:bg-gray-800">
          {
           cartProducts?.items?.map((elm,id)=>{
             return(
@@ -334,9 +337,7 @@ function Navbar({ }) {
 
        
         <button onClick={openMenu} type="button" data-collapse-toggle="ecommerce-navbar-menu-1" aria-controls="ecommerce-navbar-menu-1" aria-expanded="false" className="inline-flex lg:hidden  items-center justify-center hover:bg-gray-100 rounded-md dark:hover:bg-gray-700 p-2 text-gray-900 dark:text-white">
-          <span className="">
-            Open Menu
-          </span>
+
           <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
             <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/>
           </svg>                

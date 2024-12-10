@@ -34,7 +34,7 @@ function YogaInstructor() {
         </div>
 
         {/* Content Section */}
-        <div className="py-[50px] lg:px-[100px] md:px-[50px] px-[40px]">
+        <div className="pt-[50px] lg:px-[100px] md:px-[50px] px-[40px]">
           <div className="md:grid relative z-10  lg:overflow-visible overflow-hidden xl:grid-cols-[500px,500px] lg:grid-cols-[500px,400px] grid-cols-2 gap-x-3">
             {/* Left Image */}
             <motion.div

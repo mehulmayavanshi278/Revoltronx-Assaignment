@@ -112,23 +112,23 @@ function Blogpage({blogs}) {
             src="https://ashtanga.qodeinteractive.com/wp-content/uploads/2023/06/TA-Shop.jpg"
             alt=""
           />
-          <div className="absolute top-1/2 left-[100px]  -translate-x-[100px] -translate-y-1/2">
-            <div className="lg:px-[100px] md:px-[50px] px-[40px]">
+          <div className="absolute top-1/2 md:left-[100px] left-[85px]  -translate-x-[100px] -translate-y-1/2">
+            <div className="lg:px-[100px] md:px-[50px] px-[30px]">
               <p className="text-[15px] font-[500]">Shop / Yoga Equipment</p>
             </div>
           </div>
         </div>
 
-        <div className="mt-[50px] px-[100px]">
+        <div className="mt-[50px] lg:px-[100px] md:px-[50px]  sm:px-[40px] px-[15px]">
         
         <div className="grid lg:grid-cols-[1fr,400px] gap-x-[15px]">
            <div className="">
-           <div className="flex flex-row justify-between">
+           <div className="md:flex flex-row justify-between">
         <div className="">
             <p className="text-[15px] font-[500]">Showing 10 of 50 result</p>
           </div>
           <div className="">
-            <div className="flex justify-end items-center">
+            <div className="md:mt-0 mt-2 md:flex justify-end items-center">
             <FormControl className="min-w-[200px]" size="small">
                 <InputLabel id="sort-select-label" className="text-gray-800">
                   Sort By
@@ -179,7 +179,7 @@ function Blogpage({blogs}) {
           className="mx-auto w-full"
           variants={childVariants}
         >
-          <div className="h-[310px] relative">
+          <div className="md:h-[310px] h-[200px] relative">
             <img
             onClick={()=>{router.push(`/blogs/${elm['category'][0]}/${elm._id}`)}}
               className="w-full hover:opacity-40 transition-opacity duration-300 h-full object-cover"
@@ -220,7 +220,7 @@ function Blogpage({blogs}) {
 
 
            </div>
-           <div className="px-[50px]">
+           <div className="md:px-[50px] sm:px-[40px] px-[20px]">
 
 
 

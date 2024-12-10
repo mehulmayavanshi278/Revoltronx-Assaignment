@@ -21,7 +21,7 @@ function SingleblogSlider({singleBlogData}) {
             </div>
       <Slider {...settings}>
         {singleBlogData?.imges?.map((elm, id) => (
-          <div key={id} className=" relative w-full h-[500px]">
+          <div key={id} className=" relative w-full md:h-[500px] h-[200px]" >
             <img src={elm} alt="" className="w-full h-full object-cover" />
 
           </div>
@@ -44,25 +44,25 @@ function SingleblogSlider({singleBlogData}) {
                 </div>
 
                 <div className='text-[#3e4939] mt-2'>
-                    <h1 className='text-[34px] font-[580]'>{singleBlogData?.title}</h1>
-                    <p className='text-[16px] font-[400] mt-[15px]'>
+                    <h1 className='md:text-[34px] text-[22px] font-[580]'>{singleBlogData?.title}</h1>
+                    <p className='md:text-[16px] text-[14px] font-[400] md:mt-[15px] mt-[9px]'>
                     {singleBlogData?.description}
                     </p>
                 </div>
                 <div className='text-[#3e4939] mt-2'>
-                    <h1 className='text-[34px] font-[580]'>{singleBlogData?.secondTitle}</h1>
-                    <p className='text-[16px] font-[400] mt-[15px]'>
+                    <h1 className='md:text-[34px] text-[22px] font-[580]'>{singleBlogData?.secondTitle}</h1>
+                    <p className='md:text-[16px] text-[14px] font-[400] md:mt-[15px] mt-[9px]'>
                     {singleBlogData?.secondDescription}
                     </p>
                 </div>
 
-                <div className='mt-[25px] h-[500px]'>
+                <div className='mt-[25px] md:h-[500px] h-[200px]'>
                   <img className='w-full h-full object-cover' src='https://ashtanga.qodeinteractive.com/wp-content/uploads/2023/04/blog-single-img1.jpg' alt=''/>
                 </div>
 
                 <div className='text-[#3e4939] mt-2'>
-                    <h1 className='text-[34px] font-[580]'>{singleBlogData?.thirdTitle}</h1>
-                    <p className='text-[16px] font-[400] mt-[15px]'>
+                    <h1 className='md:text-[34px] text-[22px] font-[580]'>{singleBlogData?.thirdTitle}</h1>
+                    <p className='md:text-[16px] text-[14px]  font-[400] md:mt-[15px] mt-[9px]'>
                     {singleBlogData?.thirdDescription}
                     </p>
                 </div>

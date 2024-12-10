@@ -33,8 +33,8 @@ const ImageSlider = ({banner=[]}) => {
     // autoplaySpeed: 2000,
     beforeChange: (current, next) => {
       setActiveSlide(next);
-      console.log(current);
-      console.log(next);
+      // console.log(current);
+      // console.log(next);
       // Update the animation status for the next slide
       setHasAnimated((prev) => {
         const updated = [...prev];
@@ -61,7 +61,7 @@ const ImageSlider = ({banner=[]}) => {
               transition={{ duration: 1 }}
             >
               <img
-                className="w-full md:h-[600px] h-[300px] object-cover"
+                className="w-full md:h-[600px] h-[250px] object-cover"
                 src={elm.imgURL}
                 alt="Banner"
               />

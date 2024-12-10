@@ -153,13 +153,13 @@ export default function SingleProduct({singleProductData}){
             src="https://ashtanga.qodeinteractive.com/wp-content/uploads/2023/06/TA-Shop.jpg"
             alt=""
           />
-          <div className="absolute top-1/2 left-[100px]  -translate-x-[100px] -translate-y-1/2">
+          <div className="absolute top-1/2 md:left-[100px] left-[80px]  -translate-x-[100px] -translate-y-1/2">
             <div className="lg:px-[100px] md:px-[50px] px-[40px]  py-[50px]">
               <p className="text-[15px] font-[500]">Shop / Yoga Equipment</p>
-            </div>
+            </div>  
           </div>
         </div>
-          <div className="lg:px-[100px] md:px-[50px] px-[40px] pt-[50px]">
+          <div className="lg:px-[100px] md:px-[50px] sm:px-[400] px-[15px] pt-[50px]">
             <div className="">
               <div className="bg-white">
                 <div className="lg:grid grid-cols-[500px,1fr]">
@@ -175,7 +175,7 @@ export default function SingleProduct({singleProductData}){
                         );
                       })}
                     </div>
-                    <div className="md:w-[350px] md:h-[450px] w-[200px] mx-auto">
+                    <div className="md:w-[350px] md:h-[450px] w-[160px] mx-auto">
   <HoverZoomImage
     src={singleProductData?.images[0]}
     alt={singleProductData?.name || "Product Image"}

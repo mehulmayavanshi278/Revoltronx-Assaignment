@@ -49,7 +49,7 @@ export default function index({posts}){
     return(
         <>
 
-        <div className='pb-[50px] px-[100px]'>
+        <div className='pb-[50px] lg:px-[100px] md:px-[50px] px-[20px]'>
 
 
         <div className="relative h-[70px]">
@@ -65,18 +65,18 @@ export default function index({posts}){
           </div>
         </div>
 
-        <div className="flex items-center  space-x-4 p-4 mt-[50px]">
+        <div className="sm:flex items-center  space-x-4 p-4 mt-[50px]">
         <TextField
         label="Enter Hashtag"
         variant="outlined"
         value={hashtagVal}
         onChange={handleInputChange}
-        className="w-[600px]"
+        className="md:w-[600px] w-full"
       />
           <a
           onClick={handleButtonClick}
   title="Proceed to Checkout"
-  className=" w-[200px] me-2 inline-flex  items-center justify-center rounded-lg bg-blue-700 px-5 py-4 text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+  className=" w-[200px] sm:mt-0 mt-2 me-2 inline-flex  items-center justify-center rounded-lg bg-blue-700 px-5 py-4 text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
   role="button"
 >
   Get Posts

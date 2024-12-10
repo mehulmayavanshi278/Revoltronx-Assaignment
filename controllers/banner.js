@@ -8,7 +8,7 @@ class bannerController{
            let data = await bannerService.find();
            return res.status(200).send(data);
         }catch(err){
-            console.log(err);
+            console.log(err);       
         }
     }
     getSingleBanner = async(req,res)=>{

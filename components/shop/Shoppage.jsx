@@ -168,7 +168,7 @@ function Shoppage({products}) {
             src="https://ashtanga.qodeinteractive.com/wp-content/uploads/2023/06/TA-Shop.jpg"
             alt=""
           />
-          <div className="absolute top-1/2 left-[100px]  -translate-x-[100px] -translate-y-1/2">
+          <div className="absolute top-1/2 md:left-[100px] left-[89px]  -translate-x-[100px] -translate-y-1/2">
             <div className="lg:px-[100px] md:px-[50px] px-[40px]">
               <p className="text-[15px] font-[500]">Shop / Yoga Equipment</p>
             </div>
@@ -178,13 +178,13 @@ function Shoppage({products}) {
         <div className="mt-[50px] lg:px-[100px] md:px-[50px] px-[40px]">
         <div className="grid lg:grid-cols-[1fr,400px] gap-x-[15px]">
            <div className="">
-           <div className="flex flex-row justify-between items-center">
+           <div className="md:flex flex-row justify-between items-center">
         <div className="">
             <p className="text-[15px] font-[500]">Showing {Math.min(sortedProducts.length , currentPage===totalPages ? sortedProducts.length%9 : 9)} of {sortedProducts.length} result</p>
           </div>
           <div className="">
-            <div className="flex justify-end items-center my-4">
-              <FormControl className="min-w-[200px]" size="small">
+            <div className="md:flex justify-end items-center my-4">
+              <FormControl className="min-w-[200px] w-full" size="small">
                 <InputLabel id="sort-select-label" className="text-gray-800">
                   Sort By
                 </InputLabel>

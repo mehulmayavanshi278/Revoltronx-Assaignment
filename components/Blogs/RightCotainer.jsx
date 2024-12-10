@@ -28,7 +28,7 @@ const items = [
 function RightCotainer() {
   return (
     <div>
-      <div className="px-[50px]">
+      <div className="md:px-[50px] px-[25px]">
         <div className="">
         <div className="">
             <div className="w-full">

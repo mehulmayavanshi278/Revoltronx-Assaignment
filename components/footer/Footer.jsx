@@ -127,7 +127,7 @@ function Footer() {
             <label htmlFor="email" className="block text-sm text-gray-600">
               Fields marked with an <span className="text-red-600">*</span> are required
             </label>
-            <div className="flex items-center">
+            <div className="md:flex items-center">
               <input
                 type="email"
                 id="email"
@@ -137,7 +137,7 @@ function Footer() {
               />
               <button
                 type="submit"
-                className="px-4 py-2 bg-gray-800 text-white font-semibold rounded-r-md hover:bg-gray-700 focus:ring-2 focus:ring-blue-500"
+                className="px-4 py-2 w-full md:mt-0 mt-3 bg-gray-800 text-white font-semibold rounded-r-md hover:bg-gray-700 focus:ring-2 focus:ring-blue-500"
               >
                 Submit
               </button>
