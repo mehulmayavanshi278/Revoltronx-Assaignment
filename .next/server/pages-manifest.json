@@ -2,5 +2,12 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js"
+  "/api/cart": "pages/api/cart.js",
+  "/api/user/user": "pages/api/user/user.js",
+  "/blogs": "pages/blogs.js",
+  "/shop": "pages/shop.js",
+  "/api/blog": "pages/api/blog.js",
+  "/login": "pages/login.js",
+  "/posts": "pages/posts.js",
+  "/api/shop": "pages/api/shop.js"
 }
