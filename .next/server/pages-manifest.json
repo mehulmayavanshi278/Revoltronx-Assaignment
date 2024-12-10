@@ -5,5 +5,10 @@
   "/shop/[category]": "pages/shop/[category].js",
   "/api/shop": "pages/api/shop.js",
   "/": "pages/index.js",
-  "/shop/[category]/[id]": "pages/shop/[category]/[id].js"
+  "/api/banner": "pages/api/banner.js",
+  "/login": "pages/login.js",
+  "/api/user/user": "pages/api/user/user.js",
+  "/api/blog": "pages/api/blog.js",
+  "/api/cart": "pages/api/cart.js",
+  "/shop": "pages/shop.js"
 }

@@ -11,6 +11,7 @@ import apiService from "../../services/apiService";
 import { useRouter } from "next/router";
 import { Pagination } from "@mui/material";
 import { toast } from "react-toastify";
+import { useCart } from "../../context/cartConext/CartProvider";
 
 
 const tags = [
@@ -41,6 +42,8 @@ const tags = [
   ];
   
 function Shoppage({products}) {
+
+  const {fetchCartItems} = useCart();
   console.log("p" , products);
   const router = useRouter();
  const containerVariants = {
@@ -122,6 +125,8 @@ function Shoppage({products}) {
       console.log(res);
       if(res.status===200){
         toast.success("one Item Added To Cart");
+        fetchCartItems();
+        
       }
     }catch(err){
        if (err.response && err.response.status === 400) {
